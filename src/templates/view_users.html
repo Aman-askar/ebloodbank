@@ -1,0 +1,43 @@
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">-->
+<!--<html xmlns="http://www.w3.org/1999/xhtml">-->
+<!--<head>-->
+<!--<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />-->
+<!--<title>Untitled Document</title>-->
+<!--</head>-->
+{% extends 'adminindex.html' %}
+{% block body %}
+<body>
+<form id="form1" name="form1" method="post" action="">
+  <table class="table table-hover" width="200" border="1">
+    <tr>
+      <th>Name</th>
+      <th>Blood Group</th>
+      <th>Place</th>
+      <th>Post</th>
+      <th>Pin</th>
+      <th>Phone</th>
+      <th>Email</th>
+      <th>
+        &nbsp;</th>
+    </tr>
+    {% for i in val %}
+    <tr>
+      <td>{{i[2]}} {{i[3]}}</td>
+      <td>{{i[4]}}</td>
+      <td>&nbsp;{{i[5]}}</td>
+      <td>{{i[6]}}</td>
+      <td>{{i[7]}}</td>
+      <td>{{i[8]}}</td>
+      <td>{{i[9]}}</td>
+      <td>
+        {% if i[10]=='user'%}
+        <a class="link" href="acceptuser?id={{i[1]}}">block</a><br>
+        {% else %}
+        <a class="link" href="rejectuser?id={{i[1]}}">unblock</a></td>
+      {% endif %}
+    </tr>
+    {% endfor %}
+  </table>
+</form>
+</body>
+{% endblock %}

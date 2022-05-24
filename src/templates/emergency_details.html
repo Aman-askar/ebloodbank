@@ -1,0 +1,28 @@
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">-->
+<!--<html xmlns="http://www.w3.org/1999/xhtml">-->
+<!--<head>-->
+<!--<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />-->
+<!--<title>Untitled Document</title>-->
+<!--</head>-->
+{% extends 'bloodindex.html' %}
+{% block body %}
+<body>
+<form id="form1" name="form1" method="post" action="">
+  <table class="table table-hover" width="600" border="1">
+    <tr>
+      <th>date</th>
+      <th>user details </th>
+      <th></th>
+    </tr>
+    {% for i in val %}
+    <tr>
+      <td>{{i[13]}}</td>
+      <td>Name:- &nbsp;&nbsp;&nbsp;{{i[2]}} {{i[3]}} <br>Blood Group:- &nbsp;&nbsp;&nbsp;{{i[4]}}<br>place:-&nbsp;&nbsp;&nbsp;{{i[5]}} <br>Post:-&nbsp;&nbsp;&nbsp;{{i[6]}} <br>Pin:-&nbsp;&nbsp;&nbsp;{{i[7]}} <br>Phone:-&nbsp;&nbsp;&nbsp;{{i[8]}}<br>Email:- &nbsp;&nbsp;&nbsp;{{i[9]}}</td>
+      <td><a class="link" href="/user_accept?id={{i[10]}}">approve</a><br><a class="link" href="/user_reject?id={{i[10]}}">reject</a></td>
+    </tr>
+    {% endfor %}
+
+  </table>
+</form>
+</body>
+{% endblock %}

@@ -1,0 +1,41 @@
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">-->
+<!--<html xmlns="http://www.w3.org/1999/xhtml">-->
+<!--<head>-->
+<!--<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />-->
+<!--<title>Untitled Document</title>-->
+<!--</head>-->
+{% extends 'userindex.html' %}
+{% block body %}
+<body>
+<form id="form1" name="form1" method="post" action="send_emergency_alert">
+  <table width="340" border="1">
+    <tr>
+      <td>date</td>
+      <td>blood group </td>
+      <td>count</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td><input type="text" name="date"/></td>
+      <td><select name="bloodgrp">
+            <option selected="selected">select</option>
+          <option>o+</option>
+          <option >o-</option>
+          <option>A+</option>
+          <option>A-</option>
+          <option>B+</option>
+          <option>B-</option>
+          <option>AB+</option>
+          <option>AB-</option>
+                </select></td>
+      <td><input type="text" name="count"/></td>
+      <td><a href="#">view finished</a></td>
+    </tr>
+	<tr>
+	<td colspan="4" align="center"><input name="add" type="submit" value="add now" /></td>
+	</tr>
+  </table>
+</form>
+</body>
+{% endblock %}
+

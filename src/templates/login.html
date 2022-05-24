@@ -1,0 +1,61 @@
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">-->
+<!--<html xmlns="http://www.w3.org/1999/xhtml">-->
+<!--<head>-->
+<!--<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />-->
+<!--<title>Untitled Document</title>-->
+<!--</head>-->
+{% extends 'index.html' %}
+{% block body %}
+ <body class="text-center">
+
+<main class="form-signin">
+  <form id="form1" name="form1" method="post" action="login1" style="width: 300px">
+
+    <div class="form-floating">
+      <input name="username" type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
+      <label for="floatingInput">username</label>
+    </div>
+    <div class="form-floating">
+      <input name="password" type="password" class="form-control" id="floatingPassword" placeholder="Password">
+      <label for="floatingPassword">Password</label>
+    </div>
+    <br>
+
+    <button name="submit" class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button> <br><br>
+
+
+  </form>
+</main>
+
+
+
+  </body>
+
+
+<!--</html>-->
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+<!--<form id="form1" name="form1" method="post" action="login1">-->
+<!--  <table width="200" border="1">-->
+<!--  <tr>-->
+<!--    <td>username</td>-->
+<!--    <td><input name="username" type="text" /></td>-->
+<!--  </tr>-->
+<!--  <tr>-->
+<!--    <td>password</td>-->
+<!--    <td><input name="password" type="password" /></td>-->
+<!--  </tr>-->
+<!--  <tr>-->
+<!--    <td colspan="2" align="center"><input name="submit" type="submit" />-->
+<!--      <a href="user_registration">user register</a><br> <a href="hospital_registration">bloodbank register</a></td>-->
+<!--  </tr>-->
+<!--</table>-->

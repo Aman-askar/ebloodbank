@@ -1,0 +1,32 @@
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">-->
+<!--<html xmlns="http://www.w3.org/1999/xhtml">-->
+<!--<head>-->
+<!--<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />-->
+<!--<title>Untitled Document</title>-->
+<!--</head>-->
+{% extends 'bloodindex.html' %}
+{% block body %}
+<body>
+<form id="form1" name="form1" method="post" action="send_complaints">
+<!--  <table width="300" border="5">-->
+<!--    <tr>-->
+<!--      <td>complaint</td>-->
+<!--      <td><textarea rows="" cols="" name="complaint"></textarea></td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--      <td colspan="2" align="center"><input name="send" type="submit" value="send" /></td>-->
+<!--      -->
+<!--    </tr>-->
+<!--  </table>-->
+
+   <div class="form-floating textarea">
+  <textarea class="form-control " placeholder="Leave a comment here" name="complaint" id="floatingTextarea2" style="height: 100px"></textarea>
+  <label for="floatingTextarea2">Complaint</label><br>
+
+    <button class="btn btn-outline-secondary btn-lg" name="send" type="submit" value="send" >Send</button>
+
+</div>
+
+</form>
+</body>
+{% endblock %}

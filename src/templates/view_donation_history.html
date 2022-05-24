@@ -1,0 +1,21 @@
+{% extends 'userindex.html' %}
+{% block body %}
+<body>
+<form id="form1" name="form1" method="post" action="">
+  <table class="table table-hover" width="649" border="1">
+    <tr>
+      <th width="49">date</th>
+      <th width="131">blood bank </th>
+      <th width="63">status</th>
+    </tr>
+   {% for i in val %}
+    <tr>
+      <td>{{i[9]}}</td>
+      <td>{{i[12]}}</td>
+      <td>{{i[10]}}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</form>
+</body>
+{% endblock %}

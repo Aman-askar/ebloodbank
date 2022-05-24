@@ -1,0 +1,46 @@
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">-->
+<!--<html xmlns="http://www.w3.org/1999/xhtml">-->
+<!--<head>-->
+<!--<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />-->
+<!--<title>Untitled Document</title>-->
+<!--</head>-->
+{% extends 'adminindex.html' %}
+{% block body %}
+<body>
+<form id="form1" name="form1" method="post" action="search_bloodstatus">
+  <table class="table" width="200" border="1">
+    <tr>
+      <th scope="col">bloodgroup</th>
+      <th scope="col"><label>
+        <select class="form-select" name="select">
+            <option selected="selected">select</option>
+          <option>o+</option>
+          <option >o-</option>
+          <option>A+</option>
+          <option>A-</option>
+          <option>B+</option>
+          <option>B-</option>
+          <option>AB+</option>
+          <option>AB-</option>
+                </select>
+      </label>
+      <label>
+
+          <button class="btn btn-outline-secondary button" name="Submit" type="submit" value="search" >Search</button>
+</label></th>
+    </tr>
+
+    <tr>
+      <th>Hospital Name </th>
+      <th>Stock</th>
+    </tr>
+       {% for i in val1 %}
+    <tr>
+      <td>{{i[0]}}</td>
+      <td>{{i[4]}}</td>
+    </tr>
+      {% endfor %}
+  </table>
+</form>
+</body>
+{% endblock %}

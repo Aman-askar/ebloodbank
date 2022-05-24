@@ -1,0 +1,41 @@
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">-->
+<!--<html xmlns="http://www.w3.org/1999/xhtml">-->
+<!--<head>-->
+<!--<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />-->
+<!--<title>Untitled Document</title>-->
+<!--</head>-->
+{% extends 'bloodindex.html' %}
+{% block body %}
+<body>
+<form id="form1" name="form1" method="post" action="update_stocks">
+  <table class="table" width="200" border="1">
+    <tr>
+      <td class="bldtxt"><strong>Blood Group:</strong></td>
+      <td>&nbsp;<select class="form-select select" name="select">
+            <option selected="selected">select</option>
+          <option value="o+" {% if val[2]=='o+' %} selected {% endif %}>o+</option>
+          <option value="o-" {% if val[2]=='o-' %} selected {% endif %}>o-</option>
+          <option value="A+" {% if val[2]=='A+' %} selected {% endif %}>A+</option>
+          <option VALUE="A-" {% if val[2]=='A-' %} selected {% endif %}>A-</option>
+          <option VALUE="B+" {% if val[2]=='B+' %} selected {% endif %}>B+</option>
+          <option VALUE="B-" {% if val[2]=='B-' %} selected {% endif %}>B-</option>
+          <option VALUE="AB+" {% if val[2]=='AB+' %} selected {% endif %}>AB+</option>
+          <option VALUE="AB-" {% if val[2]=='AB-' %} selected {% endif %}>AB-</option>
+                </select></td>
+    </tr>
+    <tr>
+      <td class="bldtxt"><strong>Stock:</strong></td>
+      <td>&nbsp;<input class="form-control txtf" type="text" name="text"  value="{{val[3]}}"/></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td><label>
+
+          <button class="btn btn-outline-secondary button" name="Submit" type="submit" value="UPDATE" >Update</button>
+      </label></td>
+    </tr>
+  </table>
+</form>
+</body>
+<!--</html>-->
+{%endblock%}

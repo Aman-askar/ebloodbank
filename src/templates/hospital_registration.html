@@ -1,0 +1,56 @@
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">-->
+<!--<html xmlns="http://www.w3.org/1999/xhtml">-->
+<!--<head>-->
+<!--<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />-->
+<!--<title>Untitled Document</title>-->
+<!--</head>-->
+{% extends 'reg_index.html' %}
+{% block body %}
+<body>
+
+<form id="form1" name="form1" method="post" action="hospitalreg">
+  <table class="table table-bordered" border="1">
+    <tr>
+      <td>BloodBank Name </td>
+      <td><input class="form-control" name="hospitalname" type="text"required pattern="[A-Z a-z.]{2,50}"/></td>
+    </tr>
+    <tr>
+      <td>Place</td>
+      <td><input class="form-control" name="place" type="text" required pattern="[A-Z a-z.]{2,40}"/></td>
+    </tr>
+    <tr>
+      <td>Post</td>
+      <td><input class="form-control" name="post" type="text" required pattern="[A-Z a-z.]{2,40}"/></td>
+    </tr>
+    <tr>
+      <td>Pin</td>
+      <td><input class="form-control" name="pin" type="text" required pattern="[0-9]{6}" /></td>
+    </tr>
+    <tr>
+      <td>Phone</td>
+      <td><input class="form-control" name="phone" type="text"required pattern="[6789][0-9]{9}"/></td>
+    </tr>
+    <tr>
+      <td>Email</td>
+      <td><input class="form-control" name="email" type="text" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" /></td>
+    </tr>
+    <tr>
+      <td>Username</td>
+      <td><input class="form-control" name="username" type="text" required /></td>
+    </tr>
+    <tr>
+      <td>Password</td>
+      <td><input class="form-control" name="password" type="password" required required pattern="[A-Z a-z 0-9.]{5,10}"/></td>
+    </tr>
+    <tr>
+      <td colspan="2" align="center"><button class="btn btn-primary btn-lg"  name="register" type="submit" >register</button></td>
+
+    </tr>
+  </table>
+</form>
+
+</body>
+{% endblock %}
+<!--</html>-->
+
+

@@ -1,0 +1,25 @@
+{% extends 'userindex.html' %}
+{% block body %}
+<body>
+<form id="form1" name="form1" method="post" action="">
+  <table class="table table-hover" width="284" border="1">
+    <tr>
+      <th width="81">blood bank details </th>
+      <th width="28">date</th>
+      <th width="59">blood group </th>
+      <th width="34">count</th>
+      <th width="48">&nbsp;</th>
+    </tr>
+    {% for i in val %}
+    <tr>
+      <td> {{i[0]}}</td>
+      <td>&nbsp;{{i[3]}}</td>
+      <td>&nbsp;{{i[4]}}</td>
+      <td>&nbsp;{{i[5]}}</td>
+      <td><a class="link" href="emergencyapprove?id={{i[1]}}">approve</a><br><a class="link" href="emergencyreject?id={{i[1]}}">reject</a></td>
+    </tr>
+    {% endfor %}
+  </table>
+</form>
+</body>
+{% endblock %}

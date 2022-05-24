@@ -1,0 +1,60 @@
+{% extends 'reg_index.html' %}
+{% block body %}
+
+<body>
+<form id="form1" name="form1" method="post" action="userreg">
+  <table class="table table-bordered" border="1">
+  <tr>
+    <td>First Name</td>
+    <td><input class="form-control" name="firstname" type="text" required pattern="[A-Z a-z.]{2,50}"/></td>
+  </tr>
+  <tr>
+    <td>Last Name</td>
+    <td><input class="form-control" name="lastname" type="text " required pattern="[A-Z a-z.]{2,50}"/></td>
+  </tr>
+  <tr>
+    <td>Blood Group</td>
+    <td><input class="form-control" name="blood_group" type="text" required /></td>
+  </tr>
+  <tr>
+    <td>Place</td>
+    <td><input class="form-control" name="place" type="text" required pattern="[A-Z a-z.]{2,50}"/></td>
+  </tr>
+  <tr>
+    <td>Post</td>
+    <td><input class="form-control" name="post" type="text" required pattern="[A-Z a-z.]{2,50}"/></td>
+  </tr>
+  <tr>
+    <td>Pin</td>
+    <td><input class="form-control" name="pin" type="text" required pattern="[0-9]{6}"/></td>
+  </tr>
+  <tr>
+    <td>Phone</td>
+    <td><input class="form-control" name="phone" type="text" required pattern="[6789][0-9]{9}"/></td>
+  </tr>
+  <tr>
+    <td>Email</td>
+    <td><input class="form-control" name="email" type="text" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" /></td>
+  </tr>
+      <tr>
+      <td>Username</td>
+      <td><input class="form-control" name="username" type="text" required/></td>
+    </tr>
+    <tr>
+      <td>Password</td>
+      <td><input class="form-control" name="password" type="password" required pattern="[A-Z a-z 0-9.@]{5,10}" /></td>
+    </tr>
+  <tr>
+    <td colspan="2" align="center">
+      <button class="btn btn-primary btn-lg"  name="register" type="submit" >Register</button></td>
+  </tr>
+</table>
+
+</form>
+
+</body>
+{% endblock %}
+
+
+
+

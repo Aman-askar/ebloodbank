@@ -1,0 +1,31 @@
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">-->
+<!--<html xmlns="http://www.w3.org/1999/xhtml">-->
+<!--<head>-->
+<!--<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />-->
+<!--<title>Untitled Document</title>-->
+<!--</head>-->
+{% extends 'bloodindex.html' %}
+{% block body %}
+<body>
+<form id="form1" name="form1" method="post" action="/add_stock">
+  <table class="table table-hover" width="200" border="1">
+    <tr>
+      <th>blood group </th>
+      <th>stock</th>
+      <th>&nbsp;</th>
+    </tr>
+    {% for i in val%}
+    <tr>
+      <td>{{i[2]}}&nbsp;</td>
+      <td>{{i[3]}}</td>
+      <td><a class="link" href="edit_stock?id={{i[0]}}">edit</a><br><a class="link" href="delete_stock?id={{i[0]}}">delete</a></td>
+    </tr>
+    {%endfor%}
+    <tr>
+      <td colspan="3" align="center">
+      <button class="btn btn-outline-secondary btn-lg" name="add" type="submit" value="send" >Add</button></td>
+    </tr>
+  </table>
+</form>
+</body>
+{% endblock %}
