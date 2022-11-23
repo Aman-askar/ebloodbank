@@ -243,14 +243,6 @@ CREATE TABLE `user` (
 /*Data for the table `user` */
 
 insert  into `user`(`user_id`,`userlid`,`fname`,`lname`,`blood_group`,`place`,`post`,`pin`,`phone`,`email`) values 
-(5,27,'sana','nargees','B+','calicut','vazhakad',673601,9632569845,'sana@gmail.com'),
-(6,28,'firoz','khan','O+','edavannapara','calicut',673661,9072485731,'firoz@gmail.com'),
-(7,29,'fida','fazy','B+','calicut','calicut',673001,8592816002,'fida@gmail.com'),
-(8,30,'shahid','lal','B+','calicut','calicut',673001,8592816001,'shahid@gmail.com'),
-(9,32,'hana','pp','O+','calicut','calicut',673001,9847589657,'hana@gmail.com'),
-(10,33,'finu','faiz','B+','calicut','calicut',673001,9823475393,'finu@gmail.com'),
-(11,34,'faiz','sha','O+','calicut','calicut',673661,8592816009,'faiz@gmail.com'),
-(12,35,'hafiz','khan','O-','mavoor','Mavoor',673661,9072485731,'hafis@gmail.com');
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
